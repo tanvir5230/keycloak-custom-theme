@@ -7,24 +7,24 @@ import { KcPage, type KcContext } from './keycloak-theme/kc.gen';
 import { getKcContextMock } from './keycloak-theme/login/KcPageStory';
 
 if (import.meta.env.DEV) {
-	window.kcContext = getKcContextMock({
-		pageId: 'login.ftl',
-		overrides: {}
-	});
+  window.kcContext = getKcContextMock({
+    pageId: 'login.ftl',
+    overrides: {}
+  });
 }
 
 createRoot(document.getElementById('root')!).render(
-	<StrictMode>
-		{!window.kcContext ? (
-			<h1>No Keycloak Context</h1>
-		) : (
-			<KcPage kcContext={window.kcContext} />
-		)}
-	</StrictMode>
+  <StrictMode>
+    {!window.kcContext ? (
+      <h1>No Keycloak Context</h1>
+    ) : (
+      <KcPage kcContext={window.kcContext} />
+    )}
+  </StrictMode>
 );
 
 declare global {
-	interface Window {
-		kcContext?: KcContext;
-	}
+  interface Window {
+    kcContext?: KcContext;
+  }
 }

@@ -4,11 +4,11 @@ import { keycloakify } from 'keycloakify/vite-plugin';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		keycloakify({
-			themeName: 'serious-dev',
-			accountThemeImplementation: 'none'
-		})
-	]
+  plugins: [
+    react(),
+    keycloakify({
+      themeName: 'serious-dev',
+      accountThemeImplementation: 'none'
+    })
+  ]
 });
