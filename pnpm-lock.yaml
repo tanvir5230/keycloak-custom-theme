@@ -8,12 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@storybook/react':
-        specifier: ^10.6.0
-        version: 10.6.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.6.0(@types/react@19.3.0)(react@19.3.0))(typescript@6.0.3)
-      '@storybook/react-vite':
-        specifier: ^10.6.0
-        version: 10.6.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.6.0(@types/react@19.3.0)(react@19.3.0))(typescript@6.0.3)(vite@8.3.1(@types/node@24.19.0)(esbuild@0.28.2))
       keycloakify:
         specifier: ^11.16.0
         version: 11.16.0
@@ -23,13 +17,16 @@ importers:
       react-dom:
         specifier: ^19.2.8
         version: 19.3.0(react@19.3.0)
-      storybook:
-        specifier: ^10.6.0
-        version: 10.6.0(@types/react@19.3.0)(react@19.3.0)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.11.0)
+      '@storybook/react':
+        specifier: ^10.6.0
+        version: 10.6.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.6.0(@types/react@19.3.0)(react@19.3.0))(typescript@6.0.3)
+      '@storybook/react-vite':
+        specifier: ^10.6.0
+        version: 10.6.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.6.0(@types/react@19.3.0)(react@19.3.0))(typescript@6.0.3)(vite@8.3.1(@types/node@24.19.0)(esbuild@0.28.2))
       '@types/node':
         specifier: ^24.13.3
         version: 24.19.0
@@ -54,6 +51,9 @@ importers:
       globals:
         specifier: ^17.12.0
         version: 17.12.0
+      storybook:
+        specifier: ^10.6.0
+        version: 10.6.0(@types/react@19.3.0)(react@19.3.0)
       typescript:
         specifier: ~6.0.2
         version: 6.0.3
