@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated theme and preview builds
+dist_keycloak/
+storybook-static/

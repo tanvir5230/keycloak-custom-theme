@@ -1,0 +1,7 @@
+@layer base {
+  body {
+    @apply bg-surface font-sans text-surface-foreground;
+    margin: 0;
+    min-width: 320px;
+  }
+}

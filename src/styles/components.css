@@ -1,0 +1,24 @@
+@layer components {
+  .btn-primary {
+    @apply inline-flex
+      cursor-pointer
+      items-center
+      justify-center
+      gap-2
+      rounded-sm
+      bg-primary
+      px-4
+      py-2
+      text-button-md
+      font-medium
+      text-primary-foreground
+      transition-colors
+      hover:bg-primary-hover
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-primary/30
+      disabled:pointer-events-none
+      disabled:cursor-not-allowed
+      disabled:bg-muted;
+  }
+}

@@ -1,3 +1,4 @@
+import logoUrl from '../../assets/logo.png';
 import { cn } from '../../utils/cn';
 
 type LogoProps = {
@@ -7,7 +8,7 @@ type LogoProps = {
 export function Logo({ className }: LogoProps) {
   return (
     <img
-      src="/logo.svg"
+      src={logoUrl}
       width={178}
       height={56}
       alt="JustSafe VIMS"

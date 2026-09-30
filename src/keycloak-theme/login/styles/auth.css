@@ -1,0 +1,133 @@
+/* Scope all adapters to the custom template so fallback pages keep their own CSS. */
+@layer components {
+  .auth-theme .kcLoginClass {
+    @apply flex min-h-dvh w-full items-center justify-center px-4 py-20;
+  }
+
+  .auth-theme .kcHeaderClass {
+    @apply hidden;
+  }
+  .auth-theme .kcFormCardClass {
+    @apply w-full max-w-110 rounded-md border border-stroke bg-surface p-6 shadow-lg sm:p-8;
+  }
+  .auth-theme .kcFormHeaderClass {
+    @apply mb-6;
+  }
+  .auth-theme #kc-page-title {
+    @apply text-h5 font-semibold text-foreground;
+  }
+  .auth-theme .kcFormGroupClass {
+    @apply mb-4;
+  }
+  .auth-theme .kcLabelClass {
+    @apply mb-1 inline-block text-body-1 font-semibold text-foreground;
+  }
+  .auth-theme .required {
+    @apply text-destructive;
+  }
+  .auth-theme .subtitle {
+    @apply text-body-2 text-foreground-secondary;
+  }
+
+  .auth-theme
+    .kcInputClass:not([type='checkbox']):not([type='radio']):not([type='hidden']),
+  .auth-theme .kcTextareaClass {
+    @apply w-full rounded-sm border border-input-border bg-white p-3 text-body-1 text-foreground
+      outline-none transition-[border-color,box-shadow] placeholder:text-foreground-secondary
+      focus:border-primary focus:ring-1 focus:ring-primary
+      disabled:cursor-not-allowed disabled:bg-muted/10 disabled:opacity-60;
+  }
+  .auth-theme .kcInputClass[aria-invalid='true'] {
+    @apply border-destructive;
+  }
+  .auth-theme .kcInputErrorMessageClass {
+    @apply mt-1 block text-body-2 text-destructive;
+  }
+  .auth-theme .kcInputHelperTextBeforeClass,
+  .auth-theme .kcInputHelperTextAfterClass {
+    @apply text-body-2 text-foreground-secondary;
+  }
+
+  .auth-theme .kcInputGroup {
+    @apply relative;
+  }
+  .auth-theme .kcInputGroup .kcInputClass {
+    @apply pr-12;
+  }
+  .auth-theme .kcFormPasswordVisibilityButtonClass {
+    @apply absolute right-1 top-1/2 grid size-10 -translate-y-1/2 cursor-pointer place-items-center
+      rounded-sm border-0 bg-transparent text-foreground-secondary
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+  .auth-theme .kcFormPasswordVisibilityButtonClass svg {
+    @apply size-4;
+  }
+  /* Upstream profile/password forms use <i> elements instead of the shared SVG. */
+  .auth-theme .kcFormPasswordVisibilityButtonClass i {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-width='2' d='M2 12s3-6 10-6 10 6 10 6-3 6-10 6S2 12 2 12Z'/%3E%3Ccircle cx='12' cy='12' r='3' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
+      center / contain no-repeat;
+  }
+
+  .auth-theme .kcFormSettingClass {
+    @apply flex flex-wrap items-center justify-between gap-3;
+  }
+  .auth-theme .checkbox label {
+    @apply flex items-center gap-2 text-body-1 text-foreground-secondary;
+  }
+  .auth-theme input[type='checkbox'],
+  .auth-theme input[type='radio'] {
+    @apply size-4 shrink-0 cursor-pointer accent-primary;
+  }
+  .auth-theme a {
+    @apply text-body-1 font-semibold text-primary no-underline hover:underline
+      focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+  .auth-theme .kcButtonClass {
+    @apply inline-flex cursor-pointer items-center justify-center rounded-sm px-4 py-3
+      text-button-md font-medium transition-colors focus-visible:outline-none
+      focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .auth-theme .kcButtonPrimaryClass {
+    @apply bg-primary text-primary-foreground hover:bg-primary-hover;
+  }
+  .auth-theme .kcButtonDefaultClass {
+    @apply border border-stroke bg-white text-foreground;
+  }
+  .auth-theme .kcButtonBlockClass {
+    @apply w-full;
+  }
+  .auth-theme #kc-form-buttons {
+    @apply mt-4 flex flex-wrap gap-2;
+  }
+  .auth-theme .kcSignUpClass {
+    @apply mt-6 text-center text-body-1 text-foreground-secondary;
+  }
+  .auth-theme .kcAlertClass {
+    @apply mb-4 rounded-sm border border-stroke p-3 text-body-1;
+  }
+  .auth-theme .alert-error {
+    @apply border-destructive text-destructive;
+  }
+  .auth-theme #kc-username {
+    @apply flex flex-wrap items-center justify-between gap-2;
+  }
+  .auth-theme .kc-tooltip-text {
+    @apply text-body-2;
+  }
+  .auth-theme .kcFormSocialAccountSectionClass {
+    @apply mt-6;
+  }
+  .auth-theme .kcFormSocialAccountSectionClass h2 {
+    @apply my-4 text-center text-body-1 text-foreground-secondary;
+  }
+  .auth-theme .kcFormSocialAccountListClass {
+    @apply grid list-none gap-3 p-0;
+  }
+  .auth-theme .kcFormSocialAccountListButtonClass {
+    @apply flex justify-center rounded-sm border border-stroke p-3;
+  }
+}
